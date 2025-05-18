@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SPI Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Result Predictor</h1>
+    
+    <form id="resultForm" onsubmit="return false;">
+      <select id="subject">
+        <option value="">-- Select Subject --</option>
+        <option value="VLSI Design">VLSI Design</option>
+        <option value="Computer Communication and Networking">Computer Communication and Networking</option>
+        <option value="Analog Electronics">Analog Electronics</option>
+        <option value="Signals and Systems">Signals and Systems</option>
+        <option value="Microprocessor and Microcontroller">Microprocessor and Microcontroller</option>
+        <option value="Entrepreneurship and Startup">Entrepreneurship and Startup</option>
+      </select>
+
+      <input type="text" id="tee" placeholder="TEE Marks (out of 60)" min="0" max="60" />
+      <input type="text" id="cat" placeholder="CAT Marks (out of 40)" min="0" max="40" />
+
+      <div id="practicalInputs">
+        <input type="text" id="tep" placeholder="TEP Marks (out of 30)" min="0" max="30" />
+        <input type="text" id="cap" placeholder="CAP Marks (out of 20)" min="0" max="20" />
+      </div>
+
+      <button type="button" onclick="addSubject()">Add Subject</button>
+    </form>
+
+    <!-- ✅ Table wrapped in responsive scroll container -->
+    <div class="table-wrapper">
+      <table id="resultTable">
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>TEE</th>
+            <th>TEE Grade</th>
+            <th>CAT</th>
+            <th>CAT Grade</th>
+            <th>TEP</th>
+            <th>TEP Grade</th>
+            <th>CAP</th>
+            <th>CAP Grade</th>
+            <th>Overall Grade</th>
+            <th>Overall Point</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Filled dynamically -->
+        </tbody>
+      </table>
+    </div>
+
+    <h3 id="spi">Your SPI is: -</h3>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
